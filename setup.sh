@@ -1,9 +1,8 @@
 #!/bin/sh
 
-echo "new Mac who dis?"
-echo "Mac OS setup install script"
+echo "new mac who dis?"
 
-# Some configs reused from:
+# some configs reused from:
 # https://github.com/nnja/new-computer
 # https://github.com/ruyadorno/installme-osx
 
@@ -74,43 +73,37 @@ echo "Installing global Python packages..."
 pip3 install --upgrade pip
 pip3 install --user pylint
 
-#############################################
-### Set OSX Preferences - Borrowed from https://github.com/mathiasbynens/dotfiles/blob/master/.macos
-#############################################
+### Set OSX Preferences - borrowed from https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
 
-##################
-### Finder, Dock, & Menu Items
-##################
-
-# Keep folders on top when sorting by name
+# keep folders on top when sorting by name
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
-# Save to disk (not to iCloud) by default
+# save to disk (not to iCloud) by default
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-# Remove the auto-hiding Dock delay
+# remove the auto-hiding Dock delay
 defaults write com.apple.dock autohide-delay -float 0
 
-# Automatically hide and show the Dock
+# automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
 # only show open apps in dock
 defaults write com.apple.dock static-only -bool true
 
-# Disable the warning when changing a file extension
+# disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
-# Disable the “Are you sure you want to open this application?” dialog
+# disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
-# Avoid creating .DS_Store files on network or USB volumes
+# avoid creating .DS_Store files on network or USB volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
@@ -140,10 +133,6 @@ defaults write com.apple.systemuiserver menuExtras -array \
 	"/System/Library/CoreServices/Menu Extras/Battery.menu" \
 	"/System/Library/CoreServices/Menu Extras/Clock.menu"
 
-##################
-### Text Editing / Keyboards
-##################
-
 # Disable smart quotes and smart dashes
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
@@ -153,10 +142,6 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Use function F1, F, etc keys as standard function keys
 defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
-
-###############################################################################
-# Screenshots / Screen                                                        #
-###############################################################################
 
 # Require password immediately after sleep or screen saver begins"
 defaults write com.apple.screensaver askForPassword -int 1
@@ -171,20 +156,12 @@ defaults write com.apple.screencapture type -string "png"
 # Disable shadow in screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
 
-###############################################################################
-# Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
-###############################################################################
-
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Disable force click and haptic feedback
 defaults write ~/Library/Preferences/com.apple.AppleMultitouchTrackpad.plist ForceSuppressed -bool true
-
-###############################################################################
-# Mac App Store                                                               #
-###############################################################################
 
 # Enable the automatic update check
 defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
@@ -195,15 +172,8 @@ defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1
 # Install System data files & security updates
 defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
 
-###############################################################################
-# Photos                                                                      #
-###############################################################################
-
 # Prevent Photos from opening automatically when devices are plugged in
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
-
-### Install dotfiles repo, run link script
-#############################################
 
 echo ""
 echo "Done!" 
@@ -219,4 +189,4 @@ echo -n "Check for and install available OSX updates, install, and automatically
 read response
 if [ "$response" != "${response#[Yy]}" ] ;then
     softwareupdate -i -a --restart
-  fi
+fi
