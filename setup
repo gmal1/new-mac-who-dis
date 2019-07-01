@@ -28,8 +28,8 @@ brew install redis
 brew install git  # upgrade to latest
 brew install git-lfs # track large files in git https://github.com/git-lfs/git-lfs
 brew install wget
-brew install zsh # zshell
-brew install grep --with-default-names
+brew install zsh
+brew install grep
 brew install trash  # move to osx trash instead of rm
 brew install less
 brew install neovim
@@ -51,7 +51,6 @@ npm install -g nodemon
 brew cask install visual-studio-code
 
 ### notes 
-brew cask install evernote
 brew cask install notion
 
 ### utils 
