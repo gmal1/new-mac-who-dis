@@ -213,5 +213,5 @@ echo ""
 echo -n "Check for and install available OSX updates, install, and automatically restart? (y/n)? "
 read response
 if [ "$response" != "${response#[Yy]}" ] ;then
-    softwareupdate -i -a --restart
+    softwareupdate -i -a --restart # --restart requires root privileges
 fi
