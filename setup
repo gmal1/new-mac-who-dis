@@ -87,12 +87,6 @@ defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-# remove the auto-hiding Dock delay
-defaults write com.apple.dock autohide-delay -float 0
-
-# automatically hide and show the Dock
-defaults write com.apple.dock autohide -bool true
-
 # only show open apps in dock
 defaults write com.apple.dock static-only -bool true
 
@@ -117,9 +111,6 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 # Minimize windows into their application’s icon
 defaults write com.apple.dock minimize-to-application -bool true
 
-# Don’t show recent applications in Dock
-#    defaults write com.apple.dock show-recents -bool false
-
 # Menu bar: hide the Time Machine, User icons, but show the volume Icon.
 for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
 	defaults write "${domain}" dontAutoLoad -array \
@@ -139,10 +130,7 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
-# Use function F1, F, etc keys as standard function keys
-defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
-
-# Require password immediately after sleep or screen saver begins"
+# Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
