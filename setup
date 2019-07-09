@@ -101,7 +101,7 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 # disable PowerChime on Mac 💆
-defaults write http://com.apple .PowerChime ChimeOnNoHardware -bool true
+defaults write com.apple.PowerChime ChimeOnNoHardware -bool true
 killall PowerChime
 
 # Use list view in all Finder windows by default
