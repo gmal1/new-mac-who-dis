@@ -188,6 +188,9 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 0
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
+# Disable webcam when joining a Zoom meeting cf. https://medium.com/@jonathan.leitschuh/zoom-zero-day-4-million-webcams-maybe-an-rce-just-get-them-to-visit-your-website-ac75c83f4ef5
+defaults write ~/Library/Preferences/us.zoom.config.plist ZDisableVideo 1
+
 echo ""
 echo "Done!" 
 echo ""
