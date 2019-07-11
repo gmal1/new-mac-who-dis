@@ -46,6 +46,7 @@ nvm use node
 npm install -g eslint
 npm install -g concurrently
 npm install -g nodemon
+npm install -g tldr # https://github.com/tldr-pages/tldr
 
 ### code editor
 brew cask install visual-studio-code
@@ -71,6 +72,7 @@ echo "Installing global Python packages..."
 
 pip3 install --upgrade pip
 pip3 install --user pylint
+pip3 install howdoi # https://github.com/gleitz/howdoi
 
 ### Set OSX Preferences - borrowed from https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 
