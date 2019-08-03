@@ -47,6 +47,7 @@ npm install -g eslint
 npm install -g concurrently
 npm install -g nodemon
 npm install -g tldr # https://github.com/tldr-pages/tldr
+npm install -g pm2 # https://github.com/Unitech/pm2
 
 ### code editor
 brew cask install visual-studio-code
