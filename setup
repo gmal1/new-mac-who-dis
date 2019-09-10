@@ -59,8 +59,9 @@ brew cask install notion
 brew cask install google-chrome
 brew cask install firefox
 brew cask install alfred
-brew cask install caffeine  # keep computer from sleeping
+brew cask install caffeine # keep computer from sleeping
 brew cask install spotify
+brew cask install spectacle # window management
 
 ### chat/communication
 brew cask install slack
