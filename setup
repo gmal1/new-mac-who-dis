@@ -30,7 +30,7 @@ brew install git-lfs # track large files in git https://github.com/git-lfs/git-l
 brew install wget
 brew install zsh
 brew install grep
-brew install trash  # move to osx trash instead of rm
+brew install rmtrash  # move to osx trash instead of rm
 brew install less
 brew install neovim
 
