@@ -33,6 +33,8 @@ brew install grep
 brew install rmtrash  # move to osx trash instead of rm
 brew install less
 brew install neovim
+brew install fzf # https://github.com/junegunn/fzf
+$(brew --prefix)/opt/fzf/install # To install useful key bindings and fuzzy completion
 
 ### python
 brew install python
