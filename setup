@@ -39,7 +39,6 @@ brew install --cask caffeine # keep computer from sleeping
 brew install --cask google-chrome
 brew install --cask notion
 brew install --cask slack
-brew install --cask rectangle # window management
 brew install --cask spotify
 brew install --cask zoomus
 
