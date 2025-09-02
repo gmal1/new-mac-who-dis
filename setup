@@ -167,7 +167,10 @@ defaults write ~/Library/Preferences/us.zoom.config.plist ZDisableVideo 1
 # disable .DS_Store creation on network drives
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 
-# restart Finder
+# show hidden files
+defaults write com.apple.finder AppleShowAllFiles true 
+
+# kill Finder to apply changes
 killall Finder
 
 echo ""
